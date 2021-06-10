@@ -1,62 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<a href="https://github.com/ezralazuardy/cats-monitoring/actions/workflows/laravel.yml">
+  <img src="https://img.shields.io/github/workflow/status/ezralazuardy/cats-monitoring/Laravel?label=build" alt="Build" target="_blank" rel="noopener noreferrer">
+</a>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<a href="https://github.com/ezralazuardy/cats-monitoring/releases">
+  <img src="https://img.shields.io/github/v/release/ezralazuardy/cats-monitoring" alt="Releases" target="_blank" rel="noopener noreferrer">
+</a>
 
-## About Laravel
+<a href="https://github.com/ezralazuardy/cats-monitoring/blob/master/LICENSE">
+  <img src="https://img.shields.io/github/license/ezralazuardy/cats-monitoring" alt="License" target="_blank" rel="noopener noreferrer">
+</a>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# 🖥️ 😷 CATS Monitoring
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+CATS Monitoring is a Web Application to monitor the [Contactless Automatic Thermal Scanner](https://github.com/ezralazuardy/cats) data.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+For demo purposes, recommended to use local development environment such as [Laragon](https://laragon.org) or [Laravel Valet](https://laravel.com/docs/6.x/valet).
 
-## Learning Laravel
+<img src="https://i.ibb.co/99mSk2X/Web-capture-10-6-2021-2004-cats-test.jpg" alt="Screenshot">
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br/>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✔️ Requirements
 
-## Laravel Sponsors
+1. Setup your server to use network `192.168.10.0` with IP `192.168.10.2`
+2. Whitelist port `5000` in your firewall (inbound and outbound)
+3. Install PHP `v7.4`, Composer `v2`, and MySQL `v5.7` in your server
+4. Install Laravel's `v8` requirements as stated [here](https://laravel.com/docs/8.x/deployment#server-requirements)
+5. Install and setup Web Server ([Nginx](https://nginx.org/en/download.html) / [Apache2](https://httpd.apache.org/download.cgi)) to listen port `5000` in your server
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<br/>
 
-### Premium Partners
+## 🖥️ Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+1. Clone this repository
+2. Setup `.env.` by copying the `.env.example`
+3. `composer install`
+4. `npm install`
+5. `npm run production`
+6. Create application's database:
+    - `mysql -u root -p`
+    - `create database cats_monitoring`
+    - `exit`
+7. `php artisan key:generate`
+8. `php artisan storage:link`
+9. `php artisan migrate --force`
+10. `chmod -R 777 storage bootstrap/cache`
+11. `php artisan config:clear`
+12. Configure your Web Server to use **document root** by locating `public/` in project directory
 
-## Contributing
+<br/>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🗺️ Topology
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center"><img src="https://i.ibb.co/SrF1yCj/topology.png" alt="topology" height="200"/></p>
