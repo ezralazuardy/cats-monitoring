@@ -14,10 +14,10 @@ jobs:
       - name: 📥 Install Github Action Checkout
         uses: actions/checkout@v2
 
-      - name: 📥 Install PHP v7.2 and Composer v2
+      - name: 📥 Install PHP v7.4 and Composer v2
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "7.2"
+          php-version: "7.4"
 
       - name: 📥 Install NodeJS and NPM
         uses: bahmutov/npm-install@v1
