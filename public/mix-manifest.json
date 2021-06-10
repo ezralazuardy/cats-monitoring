@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/plugins/datatables.js": "/js/plugins/datatables.js",
+    "/css/plugins/datatables.css": "/css/plugins/datatables.css",
+    "/css/app.css": "/css/app.css",
+    "/js/app.min.js": "/js/app.min.js",
+    "/js/plugins/datatables.min.js": "/js/plugins/datatables.min.js",
+    "/css/app.min.js": "/css/app.min.js",
+    "/css/plugins/datatables.min.js": "/css/plugins/datatables.min.js"
+}

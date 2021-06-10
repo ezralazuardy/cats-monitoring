@@ -1,0 +1,65 @@
+@import "~datatables.net-dt/css/jquery.dataTables.min.css";
+
+.dataTables_filter {
+    margin-bottom: 12px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    color: #4a5568;
+    padding: .5rem 1rem;
+    line-height: 1.25;
+    border-width: 2px;
+    border-radius: .25rem;
+    border-color: #edf2f7;
+    background-color: #edf2f7;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    font-weight: 700;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+    font-weight: 700;
+    border-radius: .25rem;
+    background: #818CF8 !important;
+    border: 1px solid transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.disabled):hover {
+    color: #fff !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+    font-weight: 700;
+    border-radius: .25rem;
+    background: #818CF8 !important;
+    border: 1px solid transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:is(.disabled), .dataTables_wrapper .dataTables_paginate .paginate_button:is(.disabled):hover {
+    color: #5a6b84 !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #e2e8f0;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom-color: #e2e8f0 !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background-color: #818CF8 !important;
+}
+
+.link {
+    transition: color 0.2s ease-in;
+}
+
+.link:hover {
+    color: #768CF8 !important;
+}
