@@ -1,0 +1,85 @@
+name: Laravel
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Install Github Action Checkout
+        uses: actions/checkout@v2
+
+      - name: 📥 Install PHP v7.2 and Composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.2"
+
+      - name: 📥 Install NodeJS and NPM
+        uses: bahmutov/npm-install@v1
+
+      - name: 📥 Install Ubuntu unoconv
+        run: sudo apt update && sudo apt install unoconv
+
+      - name: 🚨 Set Application Directory Permissions
+        run: chmod -R 755 storage bootstrap/cache
+
+      - name: ⚙️ Set up SQLite Database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
+
+      - name: ⚙️ Set up Application Environment Variables for CI/CD (Production)
+        run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
+
+      - name: 🔻 Shutdown Default Ubuntu MySQL Service
+        run: sudo service mysql stop
+
+      - name: ⚙️ Set up new MySQL Service and Create MySQL Database
+        uses: mirromutth/mysql-action@v1.1
+        with:
+          host port: "3306"
+          mysql version: "5.7"
+          mysql database: "cats_monitoring"
+          mysql root password: "root"
+          mysql user: "root"
+          mysql password: "root"
+
+      - name: 💤 Wait for MySQL Service to be active
+        uses: juliangruber/sleep-action@v1
+        with:
+          time: 10s
+
+      - name: 📦 Install Composer Dependencies
+        uses: ramsey/composer-install@v1
+
+      - name: 📦 Install NPM Dependencies
+        run: npm ci
+
+      - name: 🎨 Run Laravel Mix for Production
+        run: npm run production
+
+      - name: 🔑 Generate Application Key
+        run: php artisan key:generate
+
+      - name: 💾 Link Application Storage
+        run: php artisan storage:link
+
+      - name: 🔧 Optimize Laravel Configuration
+        run: php artisan config:cache
+
+      - name: 🗄️ Run Database Migrations
+        run: php artisan migrate --force
+
+      - name: 🔄 Verify Database Rollback
+        run: php artisan migrate:refresh --force
+
+      - name: 🧪 Run Application Tests (Unit and Feature tests) via PHPUnit
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: vendor/bin/phpunit
