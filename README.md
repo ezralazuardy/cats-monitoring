@@ -10,10 +10,10 @@
   <img src="https://img.shields.io/github/license/ezralazuardy/cats-monitoring" alt="License" target="_blank" rel="noopener noreferrer">
 </a>
 
-# 🖥️ 😷 CATS Monitoring
+# 🖥️😷 CATS Monitoring
 
 CATS Monitoring is a Web Application to monitor the [Contactless Automatic Thermal Scanner](https://github.com/ezralazuardy/cats) data.
-This application also provide REST API for CATS Device in order to save and fetch data by HTTP Request.
+This application also provide REST API Endpoint for CATS Device in order to save and fetch data by HTTP Request.
 
 For demo purposes, recommended to use local development environment such as [Laragon](https://laragon.org) or [Laravel Valet](https://laravel.com/docs/6.x/valet).
 
