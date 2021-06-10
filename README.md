@@ -28,6 +28,8 @@ For demo purposes, recommended to use local development environment such as [Lar
 4. Install Laravel's `v8` requirements as stated [here](https://laravel.com/docs/8.x/deployment#server-requirements)
 5. Install and setup Web Server ([Nginx](https://nginx.org/en/download.html) / [Apache2](https://httpd.apache.org/download.cgi)) to listen port `5000` in your server
 
+If you use **Windows OS**, in case anything goes wrong, please disable your **Public Network Firewall**.
+
 <br/>
 
 ## 🖥️ Installation
