@@ -36,7 +36,7 @@ If you use **Windows OS**, in case anything goes wrong, please disable your **Pu
 ## 🖥️ Installation
 
 1. Clone this repository
-2. Setup `.env.` by copying the `.env.example`
+2. Setup `.env` by copying the `.env.example`
 3. `composer install`
 4. `npm install`
 5. `npm run production`
@@ -49,7 +49,7 @@ If you use **Windows OS**, in case anything goes wrong, please disable your **Pu
 9. `php artisan migrate --force`
 10. `chmod -R 777 storage bootstrap/cache`
 11. `php artisan config:clear`
-12. Configure your Web Server to use **document root** by locating `public/` in project directory
+12. Configure your Web Server to use **document root** by locating `public/` in the project directory
 
 <br/>
 
