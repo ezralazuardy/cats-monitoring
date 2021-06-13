@@ -1,13 +1,17 @@
-<a href="https://github.com/ezralazuardy/cats-monitoring/actions/workflows/laravel.yml">
-  <img src="https://img.shields.io/github/workflow/status/ezralazuardy/cats-monitoring/Laravel?label=build" alt="Build" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/ezralazuardy/cats-monitoring/actions/workflows/laravel.yml" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/github/workflow/status/ezralazuardy/cats-monitoring/Laravel?label=build" alt="Build">
 </a>
 
-<a href="https://github.com/ezralazuardy/cats-monitoring/releases">
-  <img src="https://img.shields.io/github/v/release/ezralazuardy/cats-monitoring" alt="Releases" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/ezralazuardy/cats-monitoring/releases" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/github/v/release/ezralazuardy/cats-monitoring" alt="Releases">
 </a>
 
-<a href="https://github.com/ezralazuardy/cats-monitoring/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/ezralazuardy/cats-monitoring" alt="License" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/ezralazuardy/cats-monitoring/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/github/license/ezralazuardy/cats-monitoring" alt="License">
+</a>
+
+<a href="https://mergify.io" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/ezralazuardy/cats-monitoring" alt="Mergify">
 </a>
 
 # 🖥️😷 CATS Monitoring
