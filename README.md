@@ -19,7 +19,7 @@
 CATS Monitoring is a Web Application to monitor the [Contactless Automatic Thermal Scanner](https://github.com/ezralazuardy/cats) data.
 This application also provide REST API Endpoint for CATS Device in order to save and fetch data by HTTP Request.
 
-For demo purposes, recommended to use local development environment such as [Laragon](https://laragon.org) or [Laravel Valet](https://laravel.com/docs/8.x/valet).
+For demo purposes, it's recommended to use local development environment such as [Laragon](https://laragon.org) or [Laravel Valet](https://laravel.com/docs/8.x/valet).
 
 <img src="https://i.ibb.co/99mSk2X/Web-capture-10-6-2021-2004-cats-test.jpg" alt="Screenshot">
 
