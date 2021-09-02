@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.3.3",
+        "autoprefixer": "^10.3.4",
         "axios": "^0.21",
         "laravel-mix": "^6.0.29",
         "lodash": "^4.17.19",
