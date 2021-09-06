@@ -20,7 +20,7 @@
     },
     "dependencies": {
         "datatables.net": "^1.11.1",
-        "datatables.net-dt": "^1.11.0",
+        "datatables.net-dt": "^1.11.1",
         "datatables.net-responsive": "^2.2.9",
         "jquery": "^3.6.0"
     }
