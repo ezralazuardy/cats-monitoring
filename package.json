@@ -16,7 +16,7 @@
         "lodash": "^4.17.19",
         "postcss": "^8.3.6",
         "script-loader": "^0.7.2",
-        "tailwindcss": "^2.2.14"
+        "tailwindcss": "^2.2.15"
     },
     "dependencies": {
         "datatables.net": "^1.11.2",
